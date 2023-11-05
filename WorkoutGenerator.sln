@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32929.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkoutGenerator", "WorkoutGenerator.csproj", "{28361750-25F9-4149-9ADD-BE854F543E87}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28361750-25F9-4149-9ADD-BE854F543E87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28361750-25F9-4149-9ADD-BE854F543E87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28361750-25F9-4149-9ADD-BE854F543E87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28361750-25F9-4149-9ADD-BE854F543E87}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BEFE6A2D-56AA-4EF7-A384-1A53C2723FAF}
+	EndGlobalSection
+EndGlobal
