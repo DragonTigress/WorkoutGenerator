@@ -10,24 +10,24 @@ using System.Windows.Forms;
 
 namespace WorkoutGenerator
 {
-    public partial class SelectTime : Form
-    {
-        public SelectTime()
-        {
-            InitializeComponent();
-        }
+	public partial class SelectTime : Form
+	{
+		public SelectTime()
+		{
+			this.InitializeComponent();
+		}
 
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-            var myForm = new SelectArea();
-            this.Hide();
-            myForm.ShowDialog();
-            this.Close();
-        }
+		private void btnNext_Click(object sender, EventArgs e)
+		{
+			var myForm = new SelectArea();
+			this.Hide();
+			myForm.ShowDialog();
+			this.Close();
+		}
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-    }
+		private void btnExit_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+	}
 }

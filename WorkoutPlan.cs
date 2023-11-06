@@ -10,38 +10,35 @@ using System.Windows.Forms;
 
 namespace WorkoutGenerator
 {
-    public partial class WorkoutPlan : Form
-    {
-        public string selectedMuscle;
-        public static StringBuilder exerciseList = new StringBuilder();
-        public WorkoutPlan()
-        {
-            InitializeComponent();
-            //apiRetriever.InitializeClientAsync(selectedMuscle).GetAwaiter().GetResult();
+	public partial class WorkoutPlan : Form
+	{
+		public string SelectedMuscle;
+		public static StringBuilder ExerciseList = new StringBuilder();
 
-        }
+		public WorkoutPlan()
+		{
+			this.InitializeComponent();
+			//apiRetriever.InitializeClientAsync(selectedMuscle).GetAwaiter().GetResult();
+		}
 
-        private Task LoadWorkoutPlan()
-        {
-            //needs the muscle selected for exercise plan.
-            ApiRetriever.InitializeClient(selectedMuscle);
-            return Task.CompletedTask;
-        }
+		private Task LoadWorkoutPlan()
+		{
+			//needs the muscle selected for exercise plan.
+			ApiRetriever.InitializeClient(this.SelectedMuscle);
+			return Task.CompletedTask;
+		}
 
+		private void btnExit_Click(object sender, EventArgs e)
+		{
+			//clears the exerciseList so that it doesn't keep all exercises in it. 
+			ExerciseList.Clear();
+			this.Close();
+		}
 
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            //clears the exerciseList so that it doesn't keep all exercises in it. 
-            exerciseList.Clear();
-            this.Close();
-        }
-
-        private void WorkoutPlan_Load(object sender, EventArgs e)
-        {
-            LoadWorkoutPlan();
-            txtExercises.Text = exerciseList.ToString();
-
-        }
-    }
+		private void WorkoutPlan_Load(object sender, EventArgs e)
+		{
+			this.LoadWorkoutPlan();
+			this.txtExercises.Text = ExerciseList.ToString();
+		}
+	}
 }
