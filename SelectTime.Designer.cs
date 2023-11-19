@@ -33,6 +33,10 @@ namespace WorkoutGenerator
             this.lstbxTime = new System.Windows.Forms.ListBox();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.rdbtn20 = new System.Windows.Forms.RadioButton();
+            this.rdbtn30 = new System.Windows.Forms.RadioButton();
+            this.rdbtn45 = new System.Windows.Forms.RadioButton();
+            this.rdbtn60 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -40,7 +44,7 @@ namespace WorkoutGenerator
             this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(65, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(272, 69);
+            this.label1.Size = new System.Drawing.Size(272, 48);
             this.label1.TabIndex = 0;
             this.label1.Text = "Please select the amount of time you\'d like to workout";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -56,10 +60,11 @@ namespace WorkoutGenerator
             "30 minutes\t",
             "45 minutes",
             "60 minutes"});
-            this.lstbxTime.Location = new System.Drawing.Point(139, 107);
+            this.lstbxTime.Location = new System.Drawing.Point(48, 102);
             this.lstbxTime.Name = "lstbxTime";
             this.lstbxTime.Size = new System.Drawing.Size(114, 104);
             this.lstbxTime.TabIndex = 9;
+            this.lstbxTime.SelectedIndexChanged += new System.EventHandler(this.lstbxTime_SelectedIndexChanged);
             // 
             // btnNext
             // 
@@ -86,12 +91,64 @@ namespace WorkoutGenerator
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // rdbtn20
+            // 
+            this.rdbtn20.AutoSize = true;
+            this.rdbtn20.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbtn20.Location = new System.Drawing.Point(215, 102);
+            this.rdbtn20.Name = "rdbtn20";
+            this.rdbtn20.Size = new System.Drawing.Size(106, 25);
+            this.rdbtn20.TabIndex = 15;
+            this.rdbtn20.TabStop = true;
+            this.rdbtn20.Text = "20 minutes";
+            this.rdbtn20.UseVisualStyleBackColor = true;
+            // 
+            // rdbtn30
+            // 
+            this.rdbtn30.AutoSize = true;
+            this.rdbtn30.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbtn30.Location = new System.Drawing.Point(215, 133);
+            this.rdbtn30.Name = "rdbtn30";
+            this.rdbtn30.Size = new System.Drawing.Size(106, 25);
+            this.rdbtn30.TabIndex = 16;
+            this.rdbtn30.TabStop = true;
+            this.rdbtn30.Text = "30 minutes";
+            this.rdbtn30.UseVisualStyleBackColor = true;
+            // 
+            // rdbtn45
+            // 
+            this.rdbtn45.AutoSize = true;
+            this.rdbtn45.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbtn45.Location = new System.Drawing.Point(215, 164);
+            this.rdbtn45.Name = "rdbtn45";
+            this.rdbtn45.Size = new System.Drawing.Size(106, 25);
+            this.rdbtn45.TabIndex = 17;
+            this.rdbtn45.TabStop = true;
+            this.rdbtn45.Text = "45 minutes";
+            this.rdbtn45.UseVisualStyleBackColor = true;
+            // 
+            // rdbtn60
+            // 
+            this.rdbtn60.AutoSize = true;
+            this.rdbtn60.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbtn60.Location = new System.Drawing.Point(215, 195);
+            this.rdbtn60.Name = "rdbtn60";
+            this.rdbtn60.Size = new System.Drawing.Size(106, 25);
+            this.rdbtn60.TabIndex = 18;
+            this.rdbtn60.TabStop = true;
+            this.rdbtn60.Text = "60 minutes";
+            this.rdbtn60.UseVisualStyleBackColor = true;
+            // 
             // SelectTime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(387, 297);
+            this.Controls.Add(this.rdbtn60);
+            this.Controls.Add(this.rdbtn45);
+            this.Controls.Add(this.rdbtn30);
+            this.Controls.Add(this.rdbtn20);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.lstbxTime);
@@ -101,6 +158,7 @@ namespace WorkoutGenerator
             this.Name = "SelectTime";
             this.Text = "Select Time";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -110,5 +168,9 @@ namespace WorkoutGenerator
         private System.Windows.Forms.ListBox lstbxTime;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.RadioButton rdbtn20;
+        private System.Windows.Forms.RadioButton rdbtn30;
+        private System.Windows.Forms.RadioButton rdbtn45;
+        private System.Windows.Forms.RadioButton rdbtn60;
     }
 }

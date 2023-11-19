@@ -59,10 +59,11 @@ namespace WorkoutGenerator
             // 
             // txtExercises
             // 
-            this.txtExercises.Location = new System.Drawing.Point(180, 145);
+            this.txtExercises.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtExercises.Location = new System.Drawing.Point(180, 119);
             this.txtExercises.Multiline = true;
             this.txtExercises.Name = "txtExercises";
-            this.txtExercises.Size = new System.Drawing.Size(323, 170);
+            this.txtExercises.Size = new System.Drawing.Size(323, 276);
             this.txtExercises.TabIndex = 15;
             // 
             // WorkoutPlan

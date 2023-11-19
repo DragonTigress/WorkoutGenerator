@@ -11,7 +11,9 @@ using System.Windows.Forms;
 namespace WorkoutGenerator
 {
     public partial class SelectArea : Form
-    { 
+    {
+        public int txtTimeLoop;
+        public string selectedMuscle;
 
         public SelectArea()
         {
@@ -20,16 +22,26 @@ namespace WorkoutGenerator
 
         public void btnGenerate_Click(object sender, EventArgs e)
         {
-            var myForm = new WorkoutPlan();
+            
             if (chkAbs.Checked)
-                myForm.selectedMuscle = "abdominals";
+                selectedMuscle = "abdominals";
             else if (chkArms.Checked)
-                myForm.selectedMuscle = "biceps";
+                selectedMuscle = "biceps";
             else if (chkLegs.Checked)
-                myForm.selectedMuscle = "glutes";
+                selectedMuscle = "glutes";
             else
-                myForm.selectedMuscle = "";
+                selectedMuscle = "";
 
+            if (rdbtn20.Checked)
+                txtTimeLoop = 2;
+            if (rdbtn30.Checked)
+                txtTimeLoop = 3;
+            if (rdbtn45.Checked)
+                txtTimeLoop = 6;
+            if (rdbtn60.Checked)
+                txtTimeLoop = 10;
+
+            var myForm = new WorkoutPlan(txtTimeLoop, selectedMuscle);
             this.Hide();
             myForm.ShowDialog();
             this.Close();
@@ -37,7 +49,7 @@ namespace WorkoutGenerator
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            var myForm = new SelectTime();
+            var myForm = new mainForm();
             this.Hide();
             myForm.ShowDialog();
             this.Close();

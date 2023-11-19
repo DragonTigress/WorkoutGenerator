@@ -37,15 +37,19 @@ namespace WorkoutGenerator
             this.btnGenerate = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.rdbtn60 = new System.Windows.Forms.RadioButton();
+            this.rdbtn45 = new System.Windows.Forms.RadioButton();
+            this.rdbtn30 = new System.Windows.Forms.RadioButton();
+            this.rdbtn20 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // chkLegs
             // 
             this.chkLegs.AutoSize = true;
-            this.chkLegs.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkLegs.Location = new System.Drawing.Point(170, 139);
+            this.chkLegs.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkLegs.Location = new System.Drawing.Point(256, 128);
             this.chkLegs.Name = "chkLegs";
-            this.chkLegs.Size = new System.Drawing.Size(58, 24);
+            this.chkLegs.Size = new System.Drawing.Size(61, 25);
             this.chkLegs.TabIndex = 8;
             this.chkLegs.Text = "Legs";
             this.chkLegs.UseVisualStyleBackColor = true;
@@ -54,10 +58,10 @@ namespace WorkoutGenerator
             // chkAbs
             // 
             this.chkAbs.AutoSize = true;
-            this.chkAbs.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkAbs.Location = new System.Drawing.Point(170, 162);
+            this.chkAbs.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkAbs.Location = new System.Drawing.Point(256, 160);
             this.chkAbs.Name = "chkAbs";
-            this.chkAbs.Size = new System.Drawing.Size(53, 24);
+            this.chkAbs.Size = new System.Drawing.Size(55, 25);
             this.chkAbs.TabIndex = 7;
             this.chkAbs.Text = "Abs";
             this.chkAbs.UseVisualStyleBackColor = true;
@@ -66,10 +70,10 @@ namespace WorkoutGenerator
             // chkFullBody
             // 
             this.chkFullBody.AutoSize = true;
-            this.chkFullBody.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFullBody.Location = new System.Drawing.Point(170, 185);
+            this.chkFullBody.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkFullBody.Location = new System.Drawing.Point(256, 190);
             this.chkFullBody.Name = "chkFullBody";
-            this.chkFullBody.Size = new System.Drawing.Size(89, 24);
+            this.chkFullBody.Size = new System.Drawing.Size(93, 25);
             this.chkFullBody.TabIndex = 6;
             this.chkFullBody.Text = "Full Body";
             this.chkFullBody.UseVisualStyleBackColor = true;
@@ -78,10 +82,10 @@ namespace WorkoutGenerator
             // chkArms
             // 
             this.chkArms.AutoSize = true;
-            this.chkArms.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkArms.Location = new System.Drawing.Point(170, 116);
+            this.chkArms.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkArms.Location = new System.Drawing.Point(256, 98);
             this.chkArms.Name = "chkArms";
-            this.chkArms.Size = new System.Drawing.Size(62, 24);
+            this.chkArms.Size = new System.Drawing.Size(66, 25);
             this.chkArms.TabIndex = 5;
             this.chkArms.Text = "Arms";
             this.chkArms.UseVisualStyleBackColor = true;
@@ -90,7 +94,7 @@ namespace WorkoutGenerator
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(45, 49);
+            this.label1.Location = new System.Drawing.Point(45, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(314, 58);
             this.label1.TabIndex = 9;
@@ -134,12 +138,64 @@ namespace WorkoutGenerator
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // rdbtn60
+            // 
+            this.rdbtn60.AutoSize = true;
+            this.rdbtn60.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbtn60.Location = new System.Drawing.Point(49, 190);
+            this.rdbtn60.Name = "rdbtn60";
+            this.rdbtn60.Size = new System.Drawing.Size(106, 25);
+            this.rdbtn60.TabIndex = 22;
+            this.rdbtn60.TabStop = true;
+            this.rdbtn60.Text = "60 minutes";
+            this.rdbtn60.UseVisualStyleBackColor = true;
+            // 
+            // rdbtn45
+            // 
+            this.rdbtn45.AutoSize = true;
+            this.rdbtn45.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbtn45.Location = new System.Drawing.Point(49, 159);
+            this.rdbtn45.Name = "rdbtn45";
+            this.rdbtn45.Size = new System.Drawing.Size(106, 25);
+            this.rdbtn45.TabIndex = 21;
+            this.rdbtn45.TabStop = true;
+            this.rdbtn45.Text = "45 minutes";
+            this.rdbtn45.UseVisualStyleBackColor = true;
+            // 
+            // rdbtn30
+            // 
+            this.rdbtn30.AutoSize = true;
+            this.rdbtn30.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbtn30.Location = new System.Drawing.Point(49, 128);
+            this.rdbtn30.Name = "rdbtn30";
+            this.rdbtn30.Size = new System.Drawing.Size(106, 25);
+            this.rdbtn30.TabIndex = 20;
+            this.rdbtn30.TabStop = true;
+            this.rdbtn30.Text = "30 minutes";
+            this.rdbtn30.UseVisualStyleBackColor = true;
+            // 
+            // rdbtn20
+            // 
+            this.rdbtn20.AutoSize = true;
+            this.rdbtn20.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbtn20.Location = new System.Drawing.Point(49, 97);
+            this.rdbtn20.Name = "rdbtn20";
+            this.rdbtn20.Size = new System.Drawing.Size(106, 25);
+            this.rdbtn20.TabIndex = 19;
+            this.rdbtn20.TabStop = true;
+            this.rdbtn20.Text = "20 minutes";
+            this.rdbtn20.UseVisualStyleBackColor = true;
+            // 
             // SelectArea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(403, 300);
+            this.Controls.Add(this.rdbtn60);
+            this.Controls.Add(this.rdbtn45);
+            this.Controls.Add(this.rdbtn30);
+            this.Controls.Add(this.rdbtn20);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnGenerate);
@@ -167,5 +223,9 @@ namespace WorkoutGenerator
         private System.Windows.Forms.Button btnGenerate;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.RadioButton rdbtn60;
+        private System.Windows.Forms.RadioButton rdbtn45;
+        private System.Windows.Forms.RadioButton rdbtn30;
+        private System.Windows.Forms.RadioButton rdbtn20;
     }
 }

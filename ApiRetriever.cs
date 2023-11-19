@@ -18,11 +18,12 @@ namespace WorkoutGenerator
             //Could add more here if I want more information
         }
 
-        public static void InitializeClient(string WorkoutMuscle = "")
+        public static void InitializeClient(string WorkoutMuscle = "", int exerNum = 0)
         {
             string baseUrl = "https://api.api-ninjas.com/v1/exercises?muscle=";
             string musclePick = baseUrl + WorkoutMuscle;
             var ApiClient = new HttpClient();
+            int i = 0;
 
             ApiClient.BaseAddress = new Uri(baseUrl);        
             ApiClient.DefaultRequestHeaders.Add("X-Api-Key", "/AtES7vCC7gtXBS3pkOE+w==hGsrSotY6M2llkf7");
@@ -36,12 +37,12 @@ namespace WorkoutGenerator
 
                 var exercise = response.Content.ReadAsAsync<IEnumerable<WorkoutModel>>().Result;
 
-                foreach (var e in exercise)
-                {
-                    
+                foreach (var e in exercise.Take(exerNum))
+                {  
                     Console.WriteLine("{0}", e.Name);
                     WorkoutPlan.exerciseList.AppendLine(e.Name);
-                    //return e.Name;
+                    i++;                  
+                    
                 }
               
             }

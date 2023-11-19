@@ -12,23 +12,37 @@ namespace WorkoutGenerator
 {
     public partial class WorkoutPlan : Form
     {
-        public string selectedMuscle;
+        //public string selectedMuscle;
         public static StringBuilder exerciseList = new StringBuilder();
-        public WorkoutPlan()
+        private int txtTime;
+        private string selectMuscle;
+
+        //public SelectTime(int txtTimeLoop)
+        //{
+        //    InitializeComponent();
+        //    txtTime = txtTimeLoop;
+        //}
+        //public int txtTimeLoop;
+        //need to incorporate the int into the API call to only loop that many times
+
+        //public class AssignTime()
+        //{
+        //    Console.WriteLine(txtTime);
+        //}
+        public WorkoutPlan(int txtTimeLoop, string selectedMuscle)
         {
             InitializeComponent();
-            //apiRetriever.InitializeClientAsync(selectedMuscle).GetAwaiter().GetResult();
+            txtTime = txtTimeLoop;
+            selectMuscle = selectedMuscle;
 
         }
 
         private Task LoadWorkoutPlan()
         {
             //needs the muscle selected for exercise plan.
-            ApiRetriever.InitializeClient(selectedMuscle);
+            ApiRetriever.InitializeClient(selectMuscle, txtTime);
             return Task.CompletedTask;
         }
-
-
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -39,9 +53,10 @@ namespace WorkoutGenerator
 
         private void WorkoutPlan_Load(object sender, EventArgs e)
         {
-            LoadWorkoutPlan();
+            LoadWorkoutPlan();;
             txtExercises.Text = exerciseList.ToString();
 
         }
+       
     }
 }
