@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace WorkoutGenerator
 {
-    public partial class SelectArea : Form
+    public partial class Selection : Form
     {
         public int txtTimeLoop;
         public string selectedMuscle;
 
-        public SelectArea()
+        public Selection()
         {
             InitializeComponent();
         }

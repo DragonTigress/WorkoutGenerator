@@ -1,7 +1,7 @@
 ﻿
 namespace WorkoutGenerator
 {
-    partial class SelectArea
+    partial class Selection
     {
         /// <summary>
         /// Required designer variable.
@@ -214,7 +214,7 @@ namespace WorkoutGenerator
             this.rdbtn20.Text = "20 minutes";
             this.rdbtn20.UseVisualStyleBackColor = true;
             // 
-            // SelectArea
+            // Selection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -228,8 +228,8 @@ namespace WorkoutGenerator
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "SelectArea";
-            this.Text = "SelectArea";
+            this.Name = "Selection";
+            this.Text = "Selection";
             this.gpbxMuscles.ResumeLayout(false);
             this.gpbxMuscles.PerformLayout();
             this.gpbxTime.ResumeLayout(false);

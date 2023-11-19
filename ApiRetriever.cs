@@ -22,8 +22,8 @@ namespace WorkoutGenerator
 			//Could add more here if I want more information
 		}
 
-		public static void InitializeClient(string workoutMuscle = "", int exerNum = 0)
-		{
+		public static void InitializeClient(string workoutMuscle = "") //, int exerNum = 0
+        {
 			var baseUrl = "https://api.api-ninjas.com/v1/exercises?muscle=";
 			var musclePick = baseUrl + workoutMuscle;
 			ApiClient = new HttpClient();
@@ -39,11 +39,12 @@ namespace WorkoutGenerator
 				var exerciseString = response.Content.ReadAsStringAsync().Result;
 				var exercise = JsonConvert.DeserializeObject<IEnumerable<WorkoutModel>>(exerciseString);
 			
-				foreach (var e in exercise.Take(exerNum))
+				//foreach (var e in exercise.Take(exerNum))
+				foreach (var e in exercise)
 				{
 					Console.WriteLine("{0}", e.Name);
-					WorkoutPlan.ExerciseList.AppendLine(e.Name);
-					//return e.Name;
+					//WorkoutPlan.ExerciseList.AppendLine(e.Name);
+					WorkoutPlan.ExerciseList.Add(e.Name);
 				}
 			}
 			else

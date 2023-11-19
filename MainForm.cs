@@ -20,7 +20,7 @@ namespace WorkoutGenerator
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            var myForm = new SelectArea();
+            var myForm = new Selection();
             this.Hide();
             myForm.ShowDialog();
             this.Close();
