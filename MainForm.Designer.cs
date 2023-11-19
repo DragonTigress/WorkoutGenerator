@@ -1,7 +1,7 @@
 ﻿
 namespace WorkoutGenerator
 {
-    partial class mainForm
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -80,7 +80,7 @@ namespace WorkoutGenerator
             this.Controls.Add(this.lblWelcome);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "mainForm";
+            this.Name = "MainForm";
             this.Text = "MainForm";
             this.ResumeLayout(false);
             this.PerformLayout();

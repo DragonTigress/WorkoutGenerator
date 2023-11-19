@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace WorkoutGenerator
 {
-    public partial class mainForm : Form
-    {
-        public mainForm()
-        {
-            InitializeComponent();
-        }
+	public partial class MainForm : Form
+	{
+		public MainForm()
+		{
+			this.InitializeComponent();
+		}
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
@@ -25,9 +25,9 @@ namespace WorkoutGenerator
             this.Close();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();   
-        }
-    }
+		private void btnExit_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+	}
 }
