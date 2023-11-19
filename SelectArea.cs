@@ -23,22 +23,24 @@ namespace WorkoutGenerator
         public void btnGenerate_Click(object sender, EventArgs e)
         {
             
-            if (chkAbs.Checked)
+            if (rdbtnAbs.Checked)
                 selectedMuscle = "abdominals";
-            else if (chkArms.Checked)
+            else if (rdbtnArms.Checked)
                 selectedMuscle = "biceps";
-            else if (chkLegs.Checked)
+            else if (rdbtnLegs.Checked)
                 selectedMuscle = "glutes";
             else
                 selectedMuscle = "";
 
             if (rdbtn20.Checked)
                 txtTimeLoop = 2;
-            if (rdbtn30.Checked)
+            else if (rdbtn30.Checked)
                 txtTimeLoop = 3;
-            if (rdbtn45.Checked)
+            else if (rdbtn45.Checked)
                 txtTimeLoop = 6;
-            if (rdbtn60.Checked)
+            else if (rdbtn60.Checked)
+                txtTimeLoop = 10;
+            else
                 txtTimeLoop = 10;
 
             var myForm = new WorkoutPlan(txtTimeLoop, selectedMuscle);
@@ -49,7 +51,7 @@ namespace WorkoutGenerator
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            var myForm = new mainForm();
+            var myForm = new MainForm();
             this.Hide();
             myForm.ShowDialog();
             this.Close();
@@ -59,44 +61,5 @@ namespace WorkoutGenerator
 		{
 			this.Close();
 		}
-
-		public void chkArms_CheckedChanged(object sender, EventArgs e)
-		{
-			if (this.chkAbs.Checked || this.chkFullBody.Checked || this.chkLegs.Checked)
-				this.chkArms.Checked = false;
-		}
-
-		private void chkFullBody_CheckedChanged(object sender, EventArgs e)
-		{
-			if (this.chkAbs.Checked || this.chkArms.Checked || this.chkLegs.Checked)
-				this.chkFullBody.Checked = false;
-		}
-
-		private void chkLegs_CheckedChanged(object sender, EventArgs e)
-		{
-			if (this.chkAbs.Checked || this.chkFullBody.Checked || this.chkArms.Checked)
-				this.chkLegs.Checked = false;
-		}
-
-		private void chkAbs_CheckedChanged(object sender, EventArgs e)
-		{
-			if (this.chkArms.Checked || this.chkFullBody.Checked || this.chkLegs.Checked)
-				this.chkAbs.Checked = false;
-		}
-
-		//public string MuscleSelection { get; set; }
-
-		//public GetMuscle(string MuscleSelection)
-		//{
-		//    if (chkAbs.Checked)
-		//        MuscleSelection = "abdominal";
-		//    else if (chkArms.Checked)
-		//        MuscleSelection = "biceps";
-		//    else if (chkLegs.Checked)
-		//        MuscleSelection = "glutes";
-		//    else
-		//        MuscleSelection = "";
-		//    return;
-		//}
 	}
 }

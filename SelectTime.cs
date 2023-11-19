@@ -20,6 +20,7 @@ namespace WorkoutGenerator
         private void btnNext_Click(object sender, EventArgs e)
         {
             var myForm = new SelectArea();
+            //var myForm2 = new WorkoutPlan();
             this.Hide();
             myForm.ShowDialog();
             this.Close();

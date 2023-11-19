@@ -14,6 +14,7 @@ namespace WorkoutGenerator
 	{
 		public MainForm()
 		{
+			
 			this.InitializeComponent();
 		}
 

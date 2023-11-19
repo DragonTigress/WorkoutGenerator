@@ -30,7 +30,6 @@ namespace WorkoutGenerator
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.lstbxTime = new System.Windows.Forms.ListBox();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.rdbtn20 = new System.Windows.Forms.RadioButton();
@@ -48,23 +47,6 @@ namespace WorkoutGenerator
             this.label1.TabIndex = 0;
             this.label1.Text = "Please select the amount of time you\'d like to workout";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lstbxTime
-            // 
-            this.lstbxTime.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lstbxTime.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstbxTime.FormattingEnabled = true;
-            this.lstbxTime.ItemHeight = 25;
-            this.lstbxTime.Items.AddRange(new object[] {
-            "20 minutes",
-            "30 minutes\t",
-            "45 minutes",
-            "60 minutes"});
-            this.lstbxTime.Location = new System.Drawing.Point(48, 102);
-            this.lstbxTime.Name = "lstbxTime";
-            this.lstbxTime.Size = new System.Drawing.Size(114, 104);
-            this.lstbxTime.TabIndex = 9;
-            this.lstbxTime.SelectedIndexChanged += new System.EventHandler(this.lstbxTime_SelectedIndexChanged);
             // 
             // btnNext
             // 
@@ -95,7 +77,7 @@ namespace WorkoutGenerator
             // 
             this.rdbtn20.AutoSize = true;
             this.rdbtn20.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtn20.Location = new System.Drawing.Point(215, 102);
+            this.rdbtn20.Location = new System.Drawing.Point(147, 101);
             this.rdbtn20.Name = "rdbtn20";
             this.rdbtn20.Size = new System.Drawing.Size(106, 25);
             this.rdbtn20.TabIndex = 15;
@@ -107,7 +89,7 @@ namespace WorkoutGenerator
             // 
             this.rdbtn30.AutoSize = true;
             this.rdbtn30.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtn30.Location = new System.Drawing.Point(215, 133);
+            this.rdbtn30.Location = new System.Drawing.Point(147, 132);
             this.rdbtn30.Name = "rdbtn30";
             this.rdbtn30.Size = new System.Drawing.Size(106, 25);
             this.rdbtn30.TabIndex = 16;
@@ -119,7 +101,7 @@ namespace WorkoutGenerator
             // 
             this.rdbtn45.AutoSize = true;
             this.rdbtn45.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtn45.Location = new System.Drawing.Point(215, 164);
+            this.rdbtn45.Location = new System.Drawing.Point(147, 163);
             this.rdbtn45.Name = "rdbtn45";
             this.rdbtn45.Size = new System.Drawing.Size(106, 25);
             this.rdbtn45.TabIndex = 17;
@@ -131,7 +113,7 @@ namespace WorkoutGenerator
             // 
             this.rdbtn60.AutoSize = true;
             this.rdbtn60.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtn60.Location = new System.Drawing.Point(215, 195);
+            this.rdbtn60.Location = new System.Drawing.Point(147, 194);
             this.rdbtn60.Name = "rdbtn60";
             this.rdbtn60.Size = new System.Drawing.Size(106, 25);
             this.rdbtn60.TabIndex = 18;
@@ -151,7 +133,6 @@ namespace WorkoutGenerator
             this.Controls.Add(this.rdbtn20);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.lstbxTime);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -165,7 +146,6 @@ namespace WorkoutGenerator
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox lstbxTime;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.RadioButton rdbtn20;
