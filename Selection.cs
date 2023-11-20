@@ -22,13 +22,33 @@ namespace WorkoutGenerator
 
         public void btnGenerate_Click(object sender, EventArgs e)
         {
-            
+
             if (rdbtnAbs.Checked)
                 selectedMuscle = "abdominals";
-            else if (rdbtnArms.Checked)
+            else if (rdbtnBicep.Checked)
                 selectedMuscle = "biceps";
-            else if (rdbtnLegs.Checked)
+            else if (rdbtnCalves.Checked)
+                selectedMuscle = "calves";
+            else if (rdbtnChest.Checked)
+                selectedMuscle = "chest";
+            else if (rdbtnForearm.Checked)
+                selectedMuscle = "forearms";
+            else if (rdbtnGlutes.Checked)
                 selectedMuscle = "glutes";
+            else if (rdbtnHamstring.Checked)
+                selectedMuscle = "hamstrings";
+            else if (rdbtnLats.Checked)
+                selectedMuscle = "lats";
+            else if (rdbtnLower.Checked)
+                selectedMuscle = "lower_back";
+            else if (rdbtnMiddle.Checked)
+                selectedMuscle = "middle_back";
+            else if (rdbtnQuads.Checked)
+                selectedMuscle = "quadriceps";
+            else if (rdbtnTraps.Checked)
+                selectedMuscle = "traps";
+            else if (rdbtnTriceps.Checked)
+                selectedMuscle = "triceps";
             else
                 selectedMuscle = "";
 
